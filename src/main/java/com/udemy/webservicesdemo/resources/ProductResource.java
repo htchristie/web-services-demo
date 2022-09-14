@@ -2,6 +2,7 @@ package com.udemy.webservicesdemo.resources;
 
 import com.udemy.webservicesdemo.entities.Product;
 import com.udemy.webservicesdemo.services.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import java.util.List;
 @RequestMapping(value = "/products")
 public class ProductResource {
 
+    @Autowired
     private ProductService service;
 
     @GetMapping
