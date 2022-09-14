@@ -1,5 +1,7 @@
 package com.udemy.webservicesdemo.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -17,6 +19,7 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
+    @JsonIgnore // This annotation helps us in ignoring certain properties of a Java class when it is getting serialized to a JSON object.
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
