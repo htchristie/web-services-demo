@@ -2,6 +2,7 @@ package com.udemy.webservicesdemo.services;
 
 import com.udemy.webservicesdemo.entities.User;
 import com.udemy.webservicesdemo.repositories.UserRepository;
+import com.udemy.webservicesdemo.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,7 @@ public class UserService {
         Optional<User> obj = repository.findById(id);
         // A container object which may or may not contain a non-null value.
         // If a value is present, isPresent() will return true and get() will return the value.
-        return obj.get();
+        return obj.orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     public User insert(User obj) {
