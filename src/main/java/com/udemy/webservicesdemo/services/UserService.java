@@ -24,4 +24,8 @@ public class UserService {
         // If a value is present, isPresent() will return true and get() will return the value.
         return obj.get();
     }
+
+    public User insert(User obj) {
+        return repository.save((obj));
+    }
 }
