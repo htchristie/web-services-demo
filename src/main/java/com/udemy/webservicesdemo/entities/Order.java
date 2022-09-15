@@ -10,7 +10,8 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-@Entity(name = "tb_order")
+@Entity
+@Table(name = "tb_order")
 public class Order implements Serializable {
 
     @Id

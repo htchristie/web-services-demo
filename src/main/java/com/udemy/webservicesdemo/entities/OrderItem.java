@@ -5,10 +5,12 @@ import com.udemy.webservicesdemo.entities.pk.OrderItemPK;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Entity(name = "tb_order_item")
+@Entity
+@Table(name = "tb_order_item")
 public class OrderItem implements Serializable {
 
     @EmbeddedId

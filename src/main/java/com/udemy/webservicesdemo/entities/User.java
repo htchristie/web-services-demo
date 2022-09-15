@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-@Entity (name = "tb_user")
+@Entity
+@Table(name = "tb_user")
 public class User implements Serializable {
 
     @Id
