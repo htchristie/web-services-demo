@@ -10,7 +10,7 @@ A sales department backend system.
 - JPA
 - H2 database
 
-### Project Structure
+### Project structure
 - Resource layer (REST Controllers)
 - Entities
 - Service layer
